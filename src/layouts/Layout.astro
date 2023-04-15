@@ -23,10 +23,28 @@ const { title } = Astro.props;
 	:root {
 		--accent: 124, 58, 237;
 		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+		--title-text: #0a0a0a;
+		--logo-black: #0a0a0a;
+		--logo-blue: #377cff;
+		--body-blue: #0075ff;
+		--white: #FFFFFF;
+		--grey: #8b8b8b;
+		--dark-grey: #4d4c4d;
+		--margin-side: 160px;
+		--margin-sections: 160px;
+		--light-grey: #d7d7d7;
+		--yellow: #fddc01;
+		--blog-background: #eeefef;
 	}
+	* {
+        margin: 0;
+        padding: 0;
+		box-sizing: border-box;
+    }
 	html {
 		font-family: system-ui, sans-serif;
 		background-color: #F6F6F6;
+		font-size: 62.5%;
 	}
 	code {
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,

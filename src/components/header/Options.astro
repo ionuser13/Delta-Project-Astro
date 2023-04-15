@@ -1,0 +1,17 @@
+---
+const links = ["Home", 'Resources', 'Enterprise', 'Pricing', 'Contact']
+---
+<ul class="options">
+    {links.map((link)=>{
+        return (
+            <li>
+                {link}
+            </li>
+        )
+    })}
+</ul>
+<style>
+    .options {
+        list-style: none;
+    }
+</style>
