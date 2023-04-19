@@ -1,6 +1,7 @@
 ---
 import Logo from "@components/header/Logo.astro";
 import Options from "@components/header/Options.astro";
+import {Icon} from "astro-icon";
 ---
 <header class="header">
     <nav class="navbar">
@@ -14,11 +15,13 @@ import Options from "@components/header/Options.astro";
                 Sign Up
             </a>
         </div>
+        <Icon name="mdi:menu" width="40" class="menu" />
     </nav>
 </header>
 <style lang="css">
     .header {
         width: 100%;
+        padding: 40px 1rem;
     }
     .navbar {
         max-width: 1440px;
@@ -26,9 +29,11 @@ import Options from "@components/header/Options.astro";
         justify-content: space-evenly;
         align-items: center;
         gap: 12px;
+        margin: 0 auto;
     }
     .buttonContainer {
         display: flex;
+        gap: 12px;
     }
     .button {
         font-size: 1.8rem;
@@ -45,4 +50,21 @@ import Options from "@components/header/Options.astro";
     .border {
         border: 2px solid var(--logo-black);
     }
+    .menu {
+        display: none
+    }
+    @media (max-width: 426px) {
+        .navbar {
+            justify-content: space-around;
+        }
+        .menu {
+            display: block;
+        }
+        .buttonContainer {
+            display: none;
+        }
+    }
 </style>
+<script>
+    const hola = "hola";
+</script>
