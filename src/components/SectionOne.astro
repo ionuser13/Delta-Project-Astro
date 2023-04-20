@@ -1,0 +1,90 @@
+---
+import { Icon } from "astro-icon";
+---
+<section class="first-section-container">
+    <div class="first-section">
+        <div class="text-container">
+            <h2 class="title">Best Digital Agency Whole Online Today.</h2>
+            <div class="first-section-body">
+                <div>
+                    <p class="text-body">We help to create best products properly & our team also collaborate with our clients.</p>
+                </div>
+                <div class="first-section-buttons">
+                    <button class="button blue">
+                        <a href="#">Get Started</a>
+                    </button>
+                    <button class="button">
+                        <a href="#">How it works
+                            <Icon name="mdi:play" width="30" class="menu" />
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="https://ionuser13.github.io/Delta-Project/assets/main-image-delta.png" alt="" class="illustration">
+        </div>
+    </div>
+</section>
+<style lang="css">
+    .first-section-container {
+        width: 100%;
+    }
+    .first-section {
+        max-width: 1440px;
+        display: flex;
+        align-items: flex-start;
+        margin-left: 4rem;
+        height: min-content;
+    }
+    .text-container {
+        width: 50%;
+    }
+    .title {
+        font-size: 4rem;
+    }
+    .image-container {
+        width: 50%;
+    }
+    .illustration {
+        width: 100%;
+    }
+    .first-section-body {
+        display: flex;
+        flex-direction: column;
+    }
+    .button {
+        font-size: 16px;
+        background: transparent;
+        border-radius: 32px;
+        cursor: pointer;
+        padding: 16px 32px;
+        white-space: nowrap;
+        text-decoration: none;
+        border: none;
+    }
+    .text-body {
+        margin: 32px 0;
+        font-size: 2rem;
+        width: 90%;
+    }
+    .blue {
+        background-color: var(--body-blue);
+        color: var(--white)
+    }
+    @media (max-width: 426px) {
+        .text-container {
+            width: 100%;
+        }
+        .image-container {
+            display: none;
+        }
+    }
+    @media (min-width: 769px) {
+        .title {
+            font-size: 6rem;
+        }
+    }
+
+
+</style>

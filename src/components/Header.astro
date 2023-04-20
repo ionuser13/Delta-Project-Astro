@@ -21,12 +21,12 @@ import {Icon} from "astro-icon";
 <style lang="css">
     .header {
         width: 100%;
-        padding: 40px 1rem;
+        padding: 40px 4rem;
     }
     .navbar {
         max-width: 1440px;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         align-items: center;
         gap: 12px;
         margin: 0 auto;
@@ -54,9 +54,6 @@ import {Icon} from "astro-icon";
         display: none
     }
     @media (max-width: 426px) {
-        .navbar {
-            justify-content: space-around;
-        }
         .menu {
             display: block;
         }
