@@ -14,11 +14,15 @@ import { Icon } from "astro-icon";
                         <a href="#">Get Started</a>
                     </button>
                     <button class="button">
-                        <a href="#">How it works
-                            <Icon name="mdi:play" width="30" class="menu" />
+                        <a href="#" class="works">
+                            How it works
+                            <Icon name="mdi:play" width="30" class="play" />
                         </a>
                     </button>
                 </div>
+            </div>
+            <div class="clients">
+                <p>Over <span class="clients-number">13,000+ Client</span> all over the world</p>
             </div>
         </div>
         <div class="image-container">
@@ -72,7 +76,27 @@ import { Icon } from "astro-icon";
         background-color: var(--body-blue);
         color: var(--white)
     }
-    @media (max-width: 426px) {
+    .works {
+        display: flex;
+        align-items: center;
+        gap: 16px
+    }
+    .play {
+        background-color: var(--light-grey);
+        border-radius: 50%;
+    }
+    .clients {
+        font-size: 16px;
+        color: var(--light-grey);
+        margin-top: 16px;
+    }
+    .clients span {
+        color: var(--title-text);
+        font-size: 24px;
+        font-weight: bold;
+    }
+    /*  */
+    @media (max-width: 460px) {
         .text-container {
             width: 100%;
         }
@@ -83,6 +107,16 @@ import { Icon } from "astro-icon";
     @media (min-width: 769px) {
         .title {
             font-size: 6rem;
+        }
+    }
+    @media (min-width: 1048px) {
+        .title {
+            font-size: 8rem;
+        }
+    }
+    @media (min-width: 1526px) {
+        .first-section {
+            margin: 0 auto;
         }
     }
 
