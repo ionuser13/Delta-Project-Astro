@@ -1,0 +1,77 @@
+---
+import { Icon } from "astro-icon";
+---
+<section class="section-two-container">
+    <div class="section-two">
+        <div class="upperSection">
+            <div class="section-name">
+                <p>About us</p>
+            </div>
+            <div class="titleContainer">
+                <h2 class="section-title">We Are Here To Make Your Website Look More Elegant and Stylish!</h2>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="image-container">
+                <img src="/src/assets/second.png" alt="Elegant and stylish" class="image">
+            </div>
+            <div class="text-container">
+                <p class="description">We are best digital agency since 1995 he word mountains, far from the countries Vokalia and Conssonantia, there mountains. large language.</p>
+                <ul class="benefitsList">
+                    <li class="benefit">
+                        <Icon name="mdi:check" width="30"/>
+                        Quality Services warranty
+                    </li>
+                    <li class="benefit">
+                        <Icon name="mdi:check" width="30"/>
+                        Thousand+ job done successfully
+                    </li>
+                    <li class="benefit">
+                        <Icon name="mdi:check" width="30"/>
+                        Expert team for 24/7 support
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<style lang="css">
+    .section-two-container {
+        width: 100%;
+        margin-bottom: 160px;
+    }
+    .section-two {
+        max-width: 1440px;
+        margin-left: 4rem;
+        height: min-content;
+    }
+    .main-content {
+        display: flex;
+        align-items: flex-start;
+        gap: 40px;
+    }
+    .image-container, .text-container {
+        width: 50%;
+    }
+    .image {
+        width: 100%;
+    }
+    .text-container {
+        font-size: 20px;
+    }
+    .description {
+        line-height: 160%;
+    }
+    .benefitsList {
+        list-style: none;
+    }
+    .benefit {
+        display: flex;
+        align-items: center;
+    }
+    @media (min-width: 1526px) {
+        .section-two {
+            margin: 0 auto;
+        }
+    }
+</style>

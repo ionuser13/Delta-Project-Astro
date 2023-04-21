@@ -1,15 +1,15 @@
 ---
 import { Icon } from "astro-icon";
 ---
-<section class="first-section-container">
-    <div class="first-section">
+<section class="section-one-container">
+    <div class="section-one">
         <div class="text-container">
             <h2 class="title">Best Digital Agency Whole Online Today.</h2>
-            <div class="first-section-body">
+            <div class="section-one-body">
                 <div>
                     <p class="text-body">We help to create best products properly & our team also collaborate with our clients.</p>
                 </div>
-                <div class="first-section-buttons">
+                <div class="section-one-buttons">
                     <button class="button blue">
                         <a href="#">Get Started</a>
                     </button>
@@ -31,30 +31,27 @@ import { Icon } from "astro-icon";
     </div>
 </section>
 <style lang="css">
-    .first-section-container {
+    .section-one-container {
         width: 100%;
         margin-bottom: 160px;
     }
-    .first-section {
+    .section-one {
         max-width: 1440px;
         display: flex;
         align-items: flex-start;
         margin-left: 4rem;
         height: min-content;
     }
-    .text-container {
+    .text-container, .image-container {
         width: 50%;
     }
     .title {
         font-size: 4rem;
     }
-    .image-container {
-        width: 50%;
-    }
     .illustration {
         width: 100%;
     }
-    .first-section-body {
+    .section-one-body {
         display: flex;
         flex-direction: column;
     }
@@ -98,7 +95,7 @@ import { Icon } from "astro-icon";
     }
     /*  */
     @media (max-width: 460px) {
-        .first-section-container {
+        .section-one-container {
             margin-bottom: 80px;
         }
         .text-container {
@@ -119,7 +116,7 @@ import { Icon } from "astro-icon";
         }
     }
     @media (min-width: 1526px) {
-        .first-section {
+        .section-one {
             margin: 0 auto;
         }
     }

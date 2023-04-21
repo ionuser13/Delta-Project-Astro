@@ -21,8 +21,6 @@ const { title } = Astro.props;
 </html>
 <style is:global>
 	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
 		--title-text: #0a0a0a;
 		--logo-black: #0a0a0a;
 		--logo-blue: #377cff;
@@ -56,4 +54,24 @@ const { title } = Astro.props;
 	a:visited {
 		color: inherit;
 	}
+	.section-name {
+		color: var(--grey);
+		font-size: 16px;
+		font-weight: bold;
+		margin-bottom: 36px;
+	}
+	.section-title {
+        font-size: 3rem;
+		width: 80%;
+    }
+	@media (min-width: 769px) {
+        .section-title {
+            font-size: 4rem;
+        }
+    }
+    @media (min-width: 1048px) {
+        .section-title {
+            font-size: 6rem;
+        }
+    }
 </style>
