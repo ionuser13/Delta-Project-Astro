@@ -31,6 +31,9 @@ import { Icon } from "astro-icon";
                         Expert team for 24/7 support
                     </li>
                 </ul>
+                <button class="button blue">
+                    <a href="#">Learn more</a>
+                </button>
             </div>
         </div>
     </div>
@@ -47,8 +50,9 @@ import { Icon } from "astro-icon";
     }
     .main-content {
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         gap: 40px;
+        margin-top: 28px;
     }
     .image-container, .text-container {
         width: 50%;
@@ -64,10 +68,20 @@ import { Icon } from "astro-icon";
     }
     .benefitsList {
         list-style: none;
+        margin: 40px 0;
     }
     .benefit {
         display: flex;
         align-items: center;
+        margin: 12px 0;
+    }
+    @media (max-width: 426px) {
+        .main-content {
+            flex-direction: column-reverse;
+        }
+        .image-container, .text-container {
+            width: 100%;
+        }
     }
     @media (min-width: 1526px) {
         .section-two {
