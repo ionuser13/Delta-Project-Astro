@@ -1,0 +1,123 @@
+<section class="section-container">
+  <div class="section-four">
+    <div class="upperSection">
+      <div class="section-name">
+        <p>Pricing</p>
+      </div>
+      <div class="titleContainer">
+        <h2 class="section-title shorter">
+          Choose The Right Plan For Your Business
+        </h2>
+      </div>
+      <div class="switch-container">
+        <label class="form-switch">
+          <span id="month" class="bold">Monthly</span>
+          <input type="checkbox" />
+          <i id="switch"></i>
+          <span id="year" class="">Yearly</span>
+        </label><!--for ios switch-->
+        <p>20% Save</p>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .section-four {
+    max-width: 1440px;
+    margin: 0 4rem;
+    height: min-content;
+  }
+  .switch-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin: 2rem auto 0 auto;
+  }
+  .switch-container p {
+    background-color: var(--yellow);
+    font-size: 1.6rem;
+    padding: 5px 10px;
+    margin: 0 28px;
+    border-radius: 20px;
+  }
+  .bold {
+    font-weight: bold;
+  }
+  /*switch styles start*/
+  .form-switch {
+    display: inline-block;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .form-switch i {
+    position: relative;
+    display: inline-block;
+    margin: 0 12px;
+    width: 46px;
+    height: 26px;
+    background-color: #e6e6e6;
+    border-radius: 23px;
+    vertical-align: text-bottom;
+    transition: all 0.3s linear;
+  }
+  .form-switch i::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 42px;
+    height: 22px;
+    background: #fff;
+    border-radius: 11px;
+    transform: translate3d(2px, 2px, 0) scale3d(1, 1, 1);
+    transition: all 0.25s linear;
+  }
+
+  .form-switch i::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 22px;
+    height: 22px;
+    background: #fff;
+    border-radius: 11px;
+    box-shadow: 0 2px 2px rbga(0, 0, 0, 0.24);
+    transform: translate3d(2px, 2px, 0);
+    transition: all 0.2s ease-in-out;
+  }
+  .form-switch:active i::after {
+    width: 28px;
+    transform: translate3d(2px 2px 0);
+  }
+  .form-switch:active input:checked + i::after {
+    transform: translate3d(16px, 2px, 0);
+  }
+  .form-switch input {
+    display: none;
+  }
+  .form-switch input:checked + i {
+    background-color: #4bd763;
+  }
+  .form-switch input:checked + i::before {
+    transform: translate3d(18px, 2px, 0) scale3d(0, 0, 0);
+  }
+  .form-switch input:checked + i::after {
+    transform: translate3d(22px, 2px, 0);
+  }
+  /*switch styles end*/
+  @media (min-width: 1526px) {
+    .section-four {
+      margin: 0 auto;
+    }
+  }
+</style>
+<script>
+  const iosSwitch = document.querySelector("#switch");
+  const month = document.querySelector("#month");
+  const year = document.querySelector("#year");
+
+  iosSwitch.addEventListener("click", () => {
+    month.classList.toggle("bold");
+    year.classList.toggle("bold");
+  });
+</script>
