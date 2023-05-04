@@ -53,15 +53,15 @@ import { Icon } from "astro-icon";
                   <div class="benefits-container">
                     <ul class="benefits">
                       <li class="benefit">
-                        <Icon name="mdi:check" width="20" class="check"/>
+                        <Icon name="mdi:check" width="30" class="check"/>
                         <p>Unlimited Updates & Projects</p>
                       </li>
                       <li class="benefit">
-                        <Icon name="mdi:check" width="20" class="check"/>
+                        <Icon name="mdi:check" width="30" class="check"/>
                         <p>Custom Permissions</p>
                       </li>  
                       <li class="benefit">
-                        <Icon name="mdi:check" width="20" class="check"/>
+                        <Icon name="mdi:check" width="30" class="check"/>
                         <p>Custom Infrastructure</p>  
                       </li>  
                     </ul>  
@@ -180,13 +180,14 @@ import { Icon } from "astro-icon";
   .grid-item {
     text-align: left;
     border: 2px solid var(--light-grey);
-    border-radius: 8px;
+    border-radius: 32px;
     color: black;
     font-family: sans-serif;
-    font-size: 1.6rem;
+    font-size: 2rem;
     padding: 36px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     transition: all 0.2s;
   }
   .benefits {
@@ -194,6 +195,26 @@ import { Icon } from "astro-icon";
   }
   .benefit {
     display: flex;
+    align-items: center;
+    padding: 12px 0;
+    margin: 12px 0;
+    color: var(--grey)
+  }
+  .check {
+    color: green;
+    font-weight: bold;
+    margin-right: 12px;
+  }
+  .level {
+    font-size: 2.8rem;
+  }
+  .price {
+    color: var(--light-grey)
+  }
+  .price > span {
+    font-size: 8rem;
+    font-weight: bold;
+    color: var(--title-text)
   }
   @media (min-width: 1526px) {
     .section-four {
