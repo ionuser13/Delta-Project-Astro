@@ -1,3 +1,25 @@
+---
+const prices = [
+  {
+    level: "Basic",
+    price: "29.99",
+    months: "Per",
+  },
+  {
+    level: "Professional",
+    price: "69.00",
+    months: "3",
+  },
+  {
+    level: "Ultimate",
+    price: "99.00",
+    months: "12",
+  },
+];
+
+import { Icon } from "astro-icon";
+---
+
 <section class="section-container">
   <div class="section-four">
     <div class="upperSection">
@@ -16,7 +38,47 @@
           <i id="switch"></i>
           <span id="year" class="">Yearly</span>
         </label><!--for ios switch-->
-        <p>20% Save</p>
+        <p class="discount">20% Save</p>
+      </div>
+      <div class="prices-container">
+        <div class="prices">
+          {
+            prices.map((price) => {
+              return (
+                <div class="grid-item">
+                  <p class="level">{price.level}</p>
+                  <div class="price">
+                    <span>{price.price}</span>/{price.months} month
+                  </div>
+                  <div class="benefits-container">
+                    <ul class="benefits">
+                      <li class="benefit">
+                        <Icon name="mdi:check" width="20" class="check"/>
+                        <p>Unlimited Updates & Projects</p>
+                      </li>
+                      <li class="benefit">
+                        <Icon name="mdi:check" width="20" class="check"/>
+                        <p>Custom Permissions</p>
+                      </li>  
+                      <li class="benefit">
+                        <Icon name="mdi:check" width="20" class="check"/>
+                        <p>Custom Infrastructure</p>  
+                      </li>  
+                    </ul>  
+                  </div>
+                  <div class="save-container">
+                    <div class="save">
+                      Save 40%
+                    </div>
+                  </div>
+                  <div class="button-container">
+                    <button class="choose">Choose Plan</button>  
+                  </div>
+                </div>
+              );
+            })
+          }
+        </div>
       </div>
     </div>
   </div>
@@ -105,6 +167,34 @@
     transform: translate3d(22px, 2px, 0);
   }
   /*switch styles end*/
+  .discount {
+    white-space: nowrap;
+  }
+  .prices {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    place-content: center;
+    gap: 40px;
+    margin-bottom: 8rem;
+  }
+  .grid-item {
+    text-align: left;
+    border: 2px solid var(--light-grey);
+    border-radius: 8px;
+    color: black;
+    font-family: sans-serif;
+    font-size: 1.6rem;
+    padding: 36px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.2s;
+  }
+  .benefits {
+    list-style: none;
+  }
+  .benefit {
+    display: flex;
+  }
   @media (min-width: 1526px) {
     .section-four {
       margin: 0 auto;
