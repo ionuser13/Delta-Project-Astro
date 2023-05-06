@@ -76,8 +76,7 @@ import { Icon } from "astro-icon";
     }
     .last-section {
         max-width: 1440px;
-        margin: 0 4rem;
-        padding: 0 4rem;
+        margin: 0 8rem;
         height: min-content;
     }
     .footer-grid {
@@ -111,6 +110,14 @@ import { Icon } from "astro-icon";
     .copyright-links {
         display: flex;
         gap: 32px;
+    }
+    @media (max-width: 426px) {
+        .last-section {
+            margin: 0 4rem;
+        }
+        .copyright {
+            flex-direction: column;
+        }
     }
     @media (min-width: 1526px) {
         .last-section {
