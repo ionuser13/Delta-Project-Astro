@@ -7,19 +7,32 @@
       <h2 class="subscribe">Subscribe To Our Newsletter</h2>
     </div>
     <div class="newsletter-body-container">
-        <p class="newsletter-body">But I must explain to you how all this mistaken idea of denouncing pleasure and prising pain was born.</p>
+      <p class="newsletter-body">
+        But I must explain to you how all this mistaken idea of denouncing
+        pleasure and prising pain was born.
+      </p>
+    </div>
+    <div class="email-container">
+      <input
+        id="email"
+        class="email"
+        type="email"
+        placeholder="Enter Your E-mail"
+      />
+      <input type="submit" value="Get Started" class="get-started" />
     </div>
   </div>
 </section>
 <style lang="css">
   .section-container {
     background-color: var(--light-grey);
-    padding: 4rem 0;
+    padding: 12rem 0;
   }
   .newsletter {
     width: 100%;
     max-width: 1440px;
     margin: 0 6rem;
+    padding: 10rem 0;
     height: min-content;
     background-color: var(--body-blue);
     color: var(--white);
@@ -29,14 +42,64 @@
   .join {
     font-size: 2rem;
     font-weight: bold;
-    margin-bottom: 36px;
   }
   .subscribe {
     font-size: 3.6rem;
+    margin: 3.6rem 0;
+  }
+  .newsletter-body {
+    font-size: 1.6rem;
+    width: 30%;
+    margin: 0 auto;
+  }
+  .email-container {
+    border: 1px solid var(--white);
+    margin: 3.6rem auto 0 auto;
+    width: 40%;
+    padding: 4px 8px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .email {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-style: italic;
+    font-weight: lighter;
+    margin-left: 16px;
+  }
+  .email:active {
+    border: none;
+    outline: none;
+  }
+  .email::placeholder {
+    color: var(--white);
+  }
+  .get-started {
+    padding: 13px 28px;
+    font-weight: bold;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
   }
   @media (max-width: 426px) {
+    .section-container {
+      padding: 4rem 0;
+    }
     .newsletter {
       margin: 0;
+      padding: 2rem;
+    }
+    .newsletter-body {
+      width: auto;
+    }
+    .email-container {
+      width: 100%;
+    }
+    .email {
+    margin-left: 16px;
+    margin-right: -32px;
     }
   }
   @media (min-width: 1526px) {
