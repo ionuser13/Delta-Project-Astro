@@ -1,0 +1,63 @@
+---
+const blogContent = {
+    date: '23 jun 2019',
+    title: 'Where better to go for a delicious coffee?',
+    preview: 'There are many variations of passages Lorem available, but the majority have.',
+};
+import { Icon } from "astro-icon";
+---
+<section class="section-container">
+    <div class="blog-section">
+        <div class="upperSection">
+            <div class="section-name">
+                <p>Blog</p>
+            </div>
+            <div class="titleContainer">
+                <h2 class="section-title">Latest Blog Posts</h2>
+            </div>
+        </div>
+        <div class="blogs">
+            <div class="small-blog">
+                <p class="date">{blogContent.date}</p>
+                <div class="blog-title">
+                    <p class="title">{blogContent.title}</p>
+                </div>
+                <div class="blog-description">
+                    <p class="description">{blogContent.preview}</p>
+                </div>
+                <div class="read-more-button">
+                    <button class="read-more">
+                        Read more
+                        <Icon name="mdi:arrow-right" width="10" class="play" />
+                    </button>
+                </div>
+            </div>
+            <div class="big-blog">hola</div>
+            <div class="small-blog"></div>
+        </div>
+    </div>
+</section>
+<style lang="css">
+    .section-container {
+        background-color: var(--light-grey);
+    }
+    .blog-section {
+        max-width: 1440px;
+        margin: 0 4rem;
+        height: min-content;
+    }
+    .blogs {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+        padding: 0 8rem;
+    }
+    .small-blog {
+        background-color: skyblue;
+    }
+    .big-blog {
+        grid-column: 2 / 4;
+        background-color: skyblue;
+    }
+</style>

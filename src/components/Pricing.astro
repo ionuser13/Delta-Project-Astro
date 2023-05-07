@@ -40,43 +40,41 @@ import { Icon } from "astro-icon";
         </label><!--for ios switch-->
         <p class="discount">20% Save</p>
       </div>
-      <div class="prices-container">
-        <div class="prices">
-          {
-            prices.map((price) => {
-              return (
-                <div class="grid-item">
-                  <p class="level">{price.level}</p>
-                  <div class="price">
-                    <span>{price.price}</span>/{price.months} month
-                  </div>
-                  <div class="benefits-container">
-                    <ul class="benefits">
-                      <li class="benefit">
-                        <Icon name="mdi:check" width="30" class="check"/>
-                        <p>Unlimited Updates & Projects</p>
-                      </li>
-                      <li class="benefit">
-                        <Icon name="mdi:check" width="30" class="check"/>
-                        <p>Custom Permissions</p>
-                      </li>  
-                      <li class="benefit">
-                        <Icon name="mdi:check" width="30" class="check"/>
-                        <p>Custom Infrastructure</p>  
-                      </li>  
-                    </ul>  
-                  </div>
-                  <div class="save">
-                    Save 40%
-                  </div>
-                  <div class="button-container">
-                    <button class="choose">Choose Plan</button>  
-                  </div>
+    </div>
+    <div class="prices-container">
+      <div class="prices">
+        {
+          prices.map((price) => {
+            return (
+              <div class="grid-item">
+                <p class="level">{price.level}</p>
+                <div class="price">
+                  <span>{price.price}</span>/{price.months} month
                 </div>
-              );
-            })
-          }
-        </div>
+                <div class="benefits-container">
+                  <ul class="benefits">
+                    <li class="benefit">
+                      <Icon name="mdi:check" width="30" class="check" />
+                      <p>Unlimited Updates & Projects</p>
+                    </li>
+                    <li class="benefit">
+                      <Icon name="mdi:check" width="30" class="check" />
+                      <p>Custom Permissions</p>
+                    </li>
+                    <li class="benefit">
+                      <Icon name="mdi:check" width="30" class="check" />
+                      <p>Custom Infrastructure</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="save">Save 40%</div>
+                <div class="button-container">
+                  <button class="choose">Choose Plan</button>
+                </div>
+              </div>
+            );
+          })
+        }
       </div>
     </div>
   </div>
@@ -198,7 +196,7 @@ import { Icon } from "astro-icon";
     align-items: center;
     padding: 12px 0;
     margin: 12px 0;
-    color: var(--grey)
+    color: var(--grey);
   }
   .check {
     color: green;
@@ -210,12 +208,12 @@ import { Icon } from "astro-icon";
     margin: 16px 0;
   }
   .price {
-    color: var(--light-grey)
+    color: var(--light-grey);
   }
   .price > span {
     font-size: 8rem;
     font-weight: bold;
-    color: var(--title-text)
+    color: var(--title-text);
   }
   .save {
     background-color: var(--light-grey);
@@ -226,7 +224,8 @@ import { Icon } from "astro-icon";
   .button-container {
     margin-top: 36px;
   }
-  .button-container, .choose {
+  .button-container,
+  .choose {
     width: 100%;
   }
   .choose {
