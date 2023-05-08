@@ -1,63 +1,161 @@
 ---
 const blogContent = {
-    date: '23 jun 2019',
-    title: 'Where better to go for a delicious coffee?',
-    preview: 'There are many variations of passages Lorem available, but the majority have.',
+  date: "23 jun 2019",
+  title: "Where better to go for a delicious coffee?",
+  preview:
+    "There are many variations of passages Lorem available, but the majority have.",
 };
 import { Icon } from "astro-icon";
 ---
+
 <section class="section-container">
-    <div class="blog-section">
-        <div class="upperSection">
-            <div class="section-name">
-                <p>Blog</p>
-            </div>
-            <div class="titleContainer">
-                <h2 class="section-title">Latest Blog Posts</h2>
-            </div>
-        </div>
-        <div class="blogs">
-            <div class="small-blog">
-                <p class="date">{blogContent.date}</p>
-                <div class="blog-title">
-                    <p class="title">{blogContent.title}</p>
-                </div>
-                <div class="blog-description">
-                    <p class="description">{blogContent.preview}</p>
-                </div>
-                <div class="read-more-button">
-                    <button class="read-more">
-                        Read more
-                        <Icon name="mdi:arrow-right" width="10" class="play" />
-                    </button>
-                </div>
-            </div>
-            <div class="big-blog">hola</div>
-            <div class="small-blog"></div>
-        </div>
+  <div class="blog-section">
+    <div class="upperSection">
+      <div class="section-name">
+        <p>Blog</p>
+      </div>
+      <div class="titleContainer">
+        <h2 class="section-title">Latest Blog Posts</h2>
+      </div>
     </div>
+    <div class="blogs">
+      <div class="small-blog">
+        <p class="date">{blogContent.date}</p>
+        <div class="blog-title">
+          <p class="title">{blogContent.title}</p>
+        </div>
+        <div class="blog-description">
+          <p class="description">{blogContent.preview}</p>
+        </div>
+        <div class="read-more-button">
+          <button class="read-more">
+            Read more
+            <Icon name="mdi:arrow-right" width="10" class="play" />
+          </button>
+        </div>
+      </div>
+
+      <div class="big-blog">
+        <div class="big-content-container">
+          <div class="big-content">
+            <div class="big-text">
+              <p class="big-date">{blogContent.date}</p>
+              <div class="big-blog-title">
+                <p class="big-title">{blogContent.title}</p>
+              </div>
+              <div class="big-blog-description">
+                <p class="big-description">{blogContent.preview}</p>
+              </div>
+            </div>
+            <div class="big-button">
+              <button class="button blue">
+                Read more
+                <Icon name="mdi:arrow-right" width="10" class="play" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="small-blog">
+        <p class="date">{blogContent.date}</p>
+        <div class="blog-title">
+          <p class="title">{blogContent.title}</p>
+        </div>
+        <div class="blog-description">
+          <p class="description">{blogContent.preview}</p>
+        </div>
+        <div class="read-more-button">
+          <button class="read-more">
+            Read more
+            <Icon name="mdi:arrow-right" width="10" class="play" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 <style lang="css">
-    .section-container {
-        background-color: var(--light-grey);
-    }
+  .section-container {
+    background-color: var(--light-grey);
+    padding: 8rem;
+  }
+  .blog-section {
+    max-width: 1440px;
+    margin: 0 4rem;
+    height: min-content;
+  }
+  .blogs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+    margin: 4rem 0;
+  }
+  .small-blog {
+    padding: 4rem;
+  }
+  .date,
+  .description {
+    color: var(--grey);
+    font-size: 1.6rem;
+  }
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 2rem 0;
+  }
+  .description {
+    margin: 2rem 0;
+  }
+  .read-more {
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+  }
+  .big-blog {
+    grid-column: 2 / 4;
+    background-image: url(https://ifeelonline.com/wp-content/uploads/2022/06/jud-mackrill-Of_m3hMsoAA-unsplash-1-1.jpg);
+    height: auto;
+    background-size: cover;
+    position: relative;
+    border-radius: 16px;
+  }
+  .big-content-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, #00000088 30%, #ffffff44 50%);
+    border-radius: 16px;
+    display: flex;
+    align-items: flex-end;
+  }
+  .big-content {
+    display: flex;
+    align-items: flex-end;
+    gap: 1.2rem;
+    height: 60%;
+    padding: 2rem 4rem;
+  }
+  .big-date,
+  .big-description {
+    color: var(--white);
+    font-size: 1.6rem;
+  }
+  .big-title {
+    font-size: 2rem;
+    color: var(--white);
+    font-weight: bold;
+    margin: 2rem 0;
+  }
+  .big-description {
+    margin: 2rem 0;
+    color: var(--white);
+  }
+  @media (min-width: 1526px) {
     .blog-section {
-        max-width: 1440px;
-        margin: 0 4rem;
-        height: min-content;
+      margin: 0 auto;
     }
-    .blogs {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: auto;
-        gap: 20px;
-        padding: 0 8rem;
-    }
-    .small-blog {
-        background-color: skyblue;
-    }
-    .big-blog {
-        grid-column: 2 / 4;
-        background-color: skyblue;
-    }
+  }
 </style>
