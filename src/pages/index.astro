@@ -13,8 +13,10 @@ import Contact from '@components/Contact.astro'
 ---
 
 <Layout title="Delta Project">
-	<main>
+	<header>
 		<Header />
+	</header>
+	<main>
 		<SectionOne />
 		<SectionTwo />
 		<SectionThree />
@@ -23,8 +25,10 @@ import Contact from '@components/Contact.astro'
 		<Blog />
 		<Contact />
 		<Newsletter />
-		<Footer />
 	</main>
+	<footer>
+		<Footer />
+	</footer>
 </Layout>
 
 <style>

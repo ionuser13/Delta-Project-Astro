@@ -1,116 +1,228 @@
 ---
 import { Icon } from "astro-icon";
-import contact from '@assets/contact.png'
+import contact from "@assets/contact.png";
 ---
+
 <section class="section-container">
-    <div class="section-one">
-        <div class="image-container">
-            <img src={contact} alt="" class="illustration">
-        </div>
-        <div class="text-container">
-            <div class="upperSection">
-                <div class="section-name">
-                  <p>Contact Us</p>
-                </div>
-                <div class="titleContainer">
-                  <h2 class="section-title">Got a Project Or A Partnership In Mind</h2>
-                </div>
-              </div>
-            <div class="section-one-body">
-                <div>
-                    <p class="text-body">We help to create best products properly & our team also collaborate with our clients.</p>
-                </div>
-                <div class="section-one-buttons">
-                    <button class="button blue">
-                        <a href="#">Get Started</a>
-                    </button>
-                    <button class="button">
-                        <a href="#" class="works">
-                            How it works
-                            <Icon name="mdi:play" width="30" class="icon" />
-                        </a>
-                    </button>
-                </div>
-            </div>
-            <div class="clients">
-                <p>Over <span class="clients-number">13,000+ Client</span> all over the world</p>
-            </div>
-        </div>
+  <div class="contact">
+    <div class="image-container">
+      <img src={contact} alt="" class="illustration" />
     </div>
-</section>
-<style lang="css">
-    .section-one {
-        max-width: 1440px;
-        display: flex;
-        align-items: flex-start;
-        gap: 2rem;
-        margin-left: 4rem;
-        height: min-content;
+    <div class="text-container">
+      <div class="upperSection">
+        <div class="section-name">
+          <p>Contact Us</p>
+        </div>
+        <div class="titleContainer">
+          <h2 class="section-title">Got a Project Or A Partnership In Mind</h2>
+        </div>
+      </div>
+      <div class="contact-body">
+        <div class="wrapper">
+          <div class="phone-email">
+            <div class="phone-numbers">
+              <Icon name="mdi:phone" width="30" class="icon" />
+              <p class="subtitle">Phone:</p>
+              <p class="phone-number">+99 (0) 101 0000 888</p>
+              <p class="phone-number">+99 (0) 101 870 666</p>
+            </div>
+            <div class="emails">
+              <Icon name="mdi:email" width="30" class="icon" />
+              <p class="subtitle">Email:</p>
+              <p class="email">info@deltaagency.com</p>
+              <p class="email">info@delta-lemail.com</p>
+            </div>
+          </div>
+          <div class="form-container">
+            <form novalidate class="form">
+              <p class="enter-name">Enter Your Name</p>
+              <div class="name-number">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Alex"
+                  class="box name-input"
+                />
+                <input
+                  type="number"
+                  id="number"
+                  name="number"
+                  placeholder="Your Phone Number"
+                  class="box number-input"
+                />
+              </div>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Your E-mail"
+                class="box email-input"
+              />
+              <input
+                type="text"
+                name="project"
+                id="project"
+                placeholder="Tell About Your Project"
+                class="box project-input"
+              />
+              <input
+                type="submit"
+                class="message button blue"
+                value="Send a message"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <style lang="css">
+    .contact {
+      max-width: 1440px;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      margin-left: 4rem;
+      height: min-content;
     }
-    .text-container, .image-container {
-        width: 50%;
+    .text-container,
+    .image-container {
+      width: 50%;
     }
     .upperSection {
-        text-align: left;
+      text-align: left;
     }
     .title {
-        font-size: 4rem;
+      font-size: 4rem;
     }
     .illustration {
-        width: 100%;
+      width: 100%;
     }
-    .section-one-body {
-        display: flex;
-        flex-direction: column;
+    .contact-body {
+      display: flex;
+      flex-direction: column;
+      font-size: 1.6rem;
+      margin: 3.2rem 0;
     }
-    .text-body {
-        margin: 32px 0;
-        font-size: 2rem;
-        width: 90%;
+    .phone-email {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .subtitle {
+      font-weight: bold;
+      margin: 1.2rem 0;
+    }
+    .phone-number,
+    .email {
+      color: var(--grey);
     }
     .works {
-        display: flex;
-        align-items: center;
-        gap: 16px
+      display: flex;
+      align-items: center;
+      gap: 16px;
     }
     .icon {
-        background-color: var(--light-grey);
-        border-radius: 4px;
+      background-color: var(--light-grey);
+      border-radius: 4px;
+      padding: 8px;
     }
     .clients {
-        font-size: 16px;
-        color: var(--light-grey);
-        margin-top: 16px;
+      font-size: 16px;
+      color: var(--light-grey);
+      margin-top: 16px;
     }
     .clients span {
-        color: var(--title-text);
-        font-size: 24px;
-        font-weight: bold;
+      color: var(--title-text);
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .form {
+      margin-top: 4rem;  
+      display: flex;
+      flex-direction: column;
+      padding-right: 2rem;
+    }
+    .enter-name {
+      color: var(--grey);
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+    }
+    .name-number {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    .email-input,
+    .project-input,
+    .name-input,
+    .number-input {
+      width: 100%;
+    }
+    .number-input::-webkit-inner-spin-button,
+    .number-input::-webkit-outer-spin-button {
+      display: none;
+    }
+    .box {
+      padding: 8px 0;
+      margin-bottom: 52px;
+      border: none;
+      outline: none;
+      border-bottom: 2px solid var(--grey);
+      transition: border-bottom 0.5s;
+    }
+    .box:focus {
+      border-bottom: 2px solid var(--body-blue);
+    }
+    .form input::placeholder {
+      font-size: 1.6rem;
+    }
+    .form input:active {
+      border: none;
+      outline: none;
+    }
+    .message {
+      width: max-content;
+      align-self: flex-end;
+      bottom: 20px;
+      box-shadow: -10px 14px 25px 11px rgba(0, 0, 0, 0.19);
     }
     /*  */
     @media (max-width: 600px) {
-        .text-container {
-            width: 100%;
-        }
-        .image-container {
-            display: none;
-        }
+      .text-container {
+        width: 100%;
+      }
+      .image-container {
+        display: none;
+      }
     }
     @media (min-width: 769px) {
-        .title {
-            font-size: 6rem;
-        }
+      .title {
+        font-size: 6rem;
+      }
     }
-    @media (min-width: 1048px) {
-        .title {
-            font-size: 8rem;
-        }
+    @media (min-width: 1024px) {
+        .name-number {
+        flex-direction: row;
+        gap: 3rem;
+      }
+      .name-input,
+    .number-input {
+        width: 48%;
+      }
+      .phone-email {
+        flex-direction: row;
+      }
+      .title {
+        font-size: 8rem;
+      }
     }
     @media (min-width: 1526px) {
-        .section-one {
-            margin: 0 auto;
-        }
+      .contact {
+        margin: 0 auto;
+      }
     }
-
-
-</style>
+  </style>
+</section>
