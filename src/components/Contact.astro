@@ -66,11 +66,11 @@ import contact from "@assets/contact.png";
                 placeholder="Tell About Your Project"
                 class="box project-input"
               />
-              <input
+              <button
                 type="submit"
-                class="message button blue"
-                value="Send a message"
-              />
+                class="message button blue">
+                Send a message
+            </button>
             </form>
           </div>
         </div>
@@ -140,7 +140,7 @@ import contact from "@assets/contact.png";
     }
 
     .form {
-      margin-top: 4rem;  
+      margin-top: 4rem;
       display: flex;
       flex-direction: column;
       padding-right: 2rem;
@@ -171,7 +171,6 @@ import contact from "@assets/contact.png";
       border: none;
       outline: none;
       border-bottom: 2px solid var(--grey);
-      transition: border-bottom 0.5s;
     }
     .box:focus {
       border-bottom: 2px solid var(--body-blue);
@@ -204,12 +203,12 @@ import contact from "@assets/contact.png";
       }
     }
     @media (min-width: 1024px) {
-        .name-number {
+      .name-number {
         flex-direction: row;
         gap: 3rem;
       }
       .name-input,
-    .number-input {
+      .number-input {
         width: 48%;
       }
       .phone-email {

@@ -17,11 +17,23 @@ import {Icon} from "astro-icon";
         </div>
         <Icon name="mdi:menu" width="40" class="menu" />
     </nav>
+    <div class="floating-menu none">
+        <ul class="floating-buttons">
+            <li class="floating-button">
+                <a href="/">Sign In</a>
+            </li>
+            <li class="floating-button">
+                <a href="/">Sign Up</a>
+            </li>
+        </ul>
+    </div>
 </header>
 <style lang="css">
     .header {
         width: 100%;
-        padding: 40px 4rem;
+        padding: 2rem 4rem;
+        background-color: var(--white);
+        position: relative;
     }
     .navbar {
         max-width: 1440px;
@@ -51,11 +63,30 @@ import {Icon} from "astro-icon";
         border: 2px solid var(--logo-black);
     }
     .menu {
-        display: none
+        display: none;
+    }
+    .none {
+        display: none;
+    }
+    .floating-menu {
+        position: fixed;
+        right: 4rem;
+        background-color: var(--white);
+        border: 1px solid var(--light-grey);
+        padding: 2rem 4rem;
+        border-radius: 0 0 1.2rem 1.2rem;
+    }
+    .floating-buttons {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        font-size: 1.6rem;
     }
     @media (max-width: 426px) {
         .menu {
             display: block;
+            cursor: pointer;
         }
         .buttonContainer {
             display: none;
@@ -63,5 +94,9 @@ import {Icon} from "astro-icon";
     }
 </style>
 <script>
-    const hola = "hola";
+    const floatingMenu = document.querySelector('.floating-menu');
+    const menuToggle = document.querySelector('.menu');
+    menuToggle.addEventListener('click', () => {
+        floatingMenu.classList.toggle('none')
+    })
 </script>
