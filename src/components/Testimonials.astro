@@ -1,133 +1,156 @@
 ---
 const testimonials = [
-    {
-        companyLogo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/2560px-Amazon_logo.svg.png',
-        authorName: 'Jane Cooper',
-        authorRole: 'Co-Founder Amazon'
-    },
-    {
-        companyLogo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Stripe_Logo%2C_revised_2016.svg/2560px-Stripe_Logo%2C_revised_2016.svg.png',
-        authorName: 'Elena Docrez',
-        authorRole: 'UI Designer Stripe'
-    },
-    {
-        companyLogo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Payoneer_logo.svg/768px-Payoneer_logo.svg.png',
-        authorName: 'Wade Warren',
-        authorRole: 'Co-Founder Payoneer'
-    }
-]
+  {
+    companyLogo:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/2560px-Amazon_logo.svg.png",
+    authorName: "Jane Cooper",
+    authorRole: "Co-Founder Amazon",
+  },
+  {
+    companyLogo:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Stripe_Logo%2C_revised_2016.svg/2560px-Stripe_Logo%2C_revised_2016.svg.png",
+    authorName: "Elena Docrez",
+    authorRole: "UI Designer Stripe",
+  },
+  {
+    companyLogo:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Payoneer_logo.svg/768px-Payoneer_logo.svg.png",
+    authorName: "Wade Warren",
+    authorRole: "Co-Founder Payoneer",
+  },
+];
 ---
+
 <section class="section-container">
-    <div class="section-five">
-        <div class="upperSection">
-            <div class="section-name">
-                <p>Testimonials</p>
-            </div>
-            <div class="titleContainer">
-                <h2 class="section-title">What Our Clients Say About Us</h2>
-            </div>
-        </div>
-        <div class="testimonials-container">
-            <div class="testimonials">
-                {testimonials.map((testimonial) => {
-                    return (
-                        <div class="grid-item">
-                            <div class="logo-container">
-                                <img src={testimonial.companyLogo} alt="logo" width="100" class="logo" />
-                            </div>
-                            <div class="testimonial-body">
-                                <p>Really the have given very hight quality service, we are very happy in future we will work with them. We recommend to work this nice team and expert.</p>
-                            </div>
-                            <div class="author-container">
-                                <div class="author-info">
-                                    <div >
-                                        <img src="https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg" alt="profile picture" width="50" class="author-picture-container" />
-                                    </div>
-                                    <div class="author-details">
-                                        <p class="name">
-                                            {testimonial.authorName}
-                                        </p>
-                                        <p class="role">{testimonial.authorRole}</p>
-                                    </div>
-                                </div>
-                                <div class="quotation-marks">
-                                    <img src="https://static.thenounproject.com/png/81720-200.png" alt="quotation marks" width="50" />
-                                </div>
-                            </div>
-                        </div>
-                    )
-                })}
-            </div>
-        </div>
+  <div class="section-five">
+    <div class="upperSection">
+      <div class="section-name">
+        <p>Testimonials</p>
+      </div>
+      <div class="titleContainer">
+        <h2 class="section-title">What Our Clients Say About Us</h2>
+      </div>
     </div>
+    <div class="testimonials-container">
+      <div class="testimonials">
+        {
+          testimonials.map((testimonial) => {
+            return (
+              <div class="grid-item">
+                <div class="logo-container">
+                  <img
+                    src={testimonial.companyLogo}
+                    alt="logo"
+                    width="100"
+                    class="logo"
+                  />
+                </div>
+                <div class="testimonial-body">
+                  <p>
+                    Really the have given very hight quality service, we are
+                    very happy in future we will work with them. We recommend to
+                    work this nice team and expert.
+                  </p>
+                </div>
+                <div class="author-container">
+                  <div class="author-info">
+                    <div>
+                      <img
+                        src="https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg"
+                        alt="profile picture"
+                        width="50"
+                        class="author-picture-container"
+                      />
+                    </div>
+                    <div class="author-details">
+                      <p class="name">{testimonial.authorName}</p>
+                      <p class="role">{testimonial.authorRole}</p>
+                    </div>
+                  </div>
+                  <div class="quotation-marks">
+                    <img
+                      src="https://static.thenounproject.com/png/81720-200.png"
+                      alt="quotation marks"
+                      width="50"
+                    />
+                  </div>
+                </div>
+              </div>
+            );
+          })
+        }
+      </div>
+    </div>
+  </div>
 </section>
 <style lang="css">
+  .section-five {
+    max-width: 1440px;
+    margin: 0 4rem;
+    height: min-content;
+  }
+  .testimonials-container {
+    margin-top: 4rem;
+    padding: 0 4rem;
+  }
+  .testimonials {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    place-content: center;
+    gap: 8px;
+    margin-bottom: 8rem;
+  }
+  .grid-item {
+    text-align: left;
+    border: 2px solid var(--light-grey);
+    border-radius: 4px;
+    color: black;
+    font-family: sans-serif;
+    font-size: 1.6rem;
+    padding: 36px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.2s;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .logo-container {
+    height: 60px;
+    display: flex;
+    align-items: center;
+  }
+  .testimonial-body {
+    margin: 32px 0;
+    line-height: 3.2rem;
+    font-size: 2rem;
+  }
+  .author-container,
+  .author-info {
+    display: flex;
+  }
+  .author-container {
+    justify-content: space-between;
+  }
+  .author-picture-container {
+    border-radius: 50%;
+  }
+  .author-info {
+    gap: 16px;
+  }
+  .author-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .name {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .role {
+    color: var(--grey);
+  }
+  @media (min-width: 1526px) {
     .section-five {
-        max-width: 1440px;
-        margin: 0 4rem;
-        height: min-content;
+      margin: 0 auto;
     }
-    .testimonials-container {
-        margin-top: 4rem;
-        padding: 0 4rem;
-    }
-    .testimonials {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        place-content: center;
-        gap: 8px;
-        margin-bottom: 8rem;
-    }
-    .grid-item {
-        text-align: left;
-        border: 2px solid var(--light-grey);
-        border-radius: 4px;
-        color: black;
-        font-family: sans-serif;
-        font-size: 1.6rem;
-        padding: 36px;
-        display: flex;
-        flex-direction: column;
-        transition: all .2s;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    }
-    .logo-container {
-        height: 60px;
-        display: flex;
-        align-items: center;
-    }
-    .testimonial-body {
-        margin: 32px 0;
-        line-height: 3.2rem;
-        font-size: 2rem;
-    }
-    .author-container, .author-info {
-        display: flex;
-    }
-    .author-container {
-        justify-content: space-between;
-    }
-    .author-picture-container {
-        border-radius: 50%;
-    }
-    .author-info {
-        gap: 16px;
-    }
-    .author-details {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-    }
-    .name {
-        font-size: 2rem;
-        font-weight: bold;
-    }
-    .role {
-        color: var(--grey)
-    }
-    @media (min-width: 1526px) {
-        .section-five {
-            margin: 0 auto;
-        }
-    }
+  }
 </style>

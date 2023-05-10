@@ -2,126 +2,130 @@
 import Logo from "@components/header/Logo.astro";
 import { Icon } from "astro-icon";
 ---
+
 <footer class="footer section-container">
-    <div class="last-section">
-        <div class="footer-grid">
-            <div class="presentation">
-                <Logo />
-                <p class="description">
-                    Delta is the world's largest and most secure digital service providing best agency.
-                </p>
-            </div>
-            <div class="our-service">
-                <p class="title">Our Service</p>
-                <ul class="footer-services footer-list">
-                    <li class="footer-item"><a href="#">Help center</a></li>
-                    <li class="footer-item"><a href="#">FAQ</a></li>
-                    <li class="footer-item"><a href="#">Transactioncenter</a></li>
-                    <li class="footer-item"><a href="#">Investation</a></li>
-                </ul>
-            </div>
-            <div class="company">
-                <p class="title">Company</p>
-                <ul class="footer-company footer-list">
-                    <li class="footer-item"><a href="#">About Us</a></li>
-                    <li class="footer-item"><a href="#">Career</a></li>
-                    <li class="footer-item"><a href="#">Management</a></li>
-                    <li class="footer-item"><a href="#">Blog</a></li>
-                </ul>
-            </div>
-            <div class="contact-info">
-                <p class="title">Contact Info</p>
-                <ul class="footer-company footer-list">
-                    <li class="footer-item">getinfodelta7@gmail.com</li>
-                    <li class="footer-item">(+088 1254 889 760)</li>
-                    <li class="footer-item socials">
-                        <a href="#">
-                            <Icon name="mdi:facebook" width="30"/>
-                        </a>
-                        <a href="#">
-                            <Icon name="mdi:linkedin" width="30"/>
-                        </a>
-                        <a href="#">
-                            <Icon name="mdi:twitter" width="30"/>
-                        </a>
-                        <a href="#">
-                            <Icon name="mdi:youtube" width="30"/>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="copyright">
-            <p>Copyright @ 2022 delta inc.</p>
-            <ul class="copyright-links">
-                <li class="copyright-link">
-                    <a href="#">Privacy</a>
-                </li>
-                <li class="copyright-link">
-                    <a href="#">Security</a>
-                </li>
-                <li class="copyright-link">
-                    <a href="#">Terms</a>
-                </li>
-            </ul>
-        </div>
+  <div class="last-section">
+    <div class="footer-grid">
+      <div class="presentation">
+        <Logo />
+        <p class="description">
+          Delta is the world's largest and most secure digital service providing
+          best agency.
+        </p>
+      </div>
+      <div class="our-service">
+        <p class="title">Our Service</p>
+        <ul class="footer-services footer-list">
+          <li class="footer-item"><a href="#">Help center</a></li>
+          <li class="footer-item"><a href="#">FAQ</a></li>
+          <li class="footer-item"><a href="#">Transactioncenter</a></li>
+          <li class="footer-item"><a href="#">Investation</a></li>
+        </ul>
+      </div>
+      <div class="company">
+        <p class="title">Company</p>
+        <ul class="footer-company footer-list">
+          <li class="footer-item"><a href="#">About Us</a></li>
+          <li class="footer-item"><a href="#">Career</a></li>
+          <li class="footer-item"><a href="#">Management</a></li>
+          <li class="footer-item"><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="contact-info">
+        <p class="title">Contact Info</p>
+        <ul class="footer-company footer-list">
+          <li class="footer-item">getinfodelta7@gmail.com</li>
+          <li class="footer-item">(+088 1254 889 760)</li>
+          <li class="footer-item socials">
+            <a href="#">
+              <Icon name="mdi:facebook" width="30" />
+            </a>
+            <a href="#">
+              <Icon name="mdi:linkedin" width="30" />
+            </a>
+            <a href="#">
+              <Icon name="mdi:twitter" width="30" />
+            </a>
+            <a href="#">
+              <Icon name="mdi:youtube" width="30" />
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
+    <div class="copyright">
+      <p>Copyright @ 2022 delta inc.</p>
+      <ul class="copyright-links">
+        <li class="copyright-link">
+          <a href="#">Privacy</a>
+        </li>
+        <li class="copyright-link">
+          <a href="#">Security</a>
+        </li>
+        <li class="copyright-link">
+          <a href="#">Terms</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </footer>
 <style lang="css">
-    a:hover {
-        color: var(--grey)
-    }
-    .section-container {
-        margin-bottom: 12px;
-    }
+  a:hover {
+    color: var(--grey);
+  }
+  .section-container {
+    margin-bottom: 12px;
+  }
+  .last-section {
+    max-width: 1440px;
+    margin: 0 8rem;
+    height: min-content;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    place-content: center;
+    gap: 40px;
+    font-size: 2rem;
+    margin-bottom: 8rem;
+  }
+  .description {
+    margin-top: 2rem;
+    line-height: 4rem;
+  }
+  .title {
+    font-size: 2.4rem;
+    font-weight: bold;
+  }
+  .footer-list,
+  .copyright-links {
+    list-style: none;
+  }
+  .footer-item,
+  .title {
+    padding: 8px 0;
+    margin: 8px 0;
+  }
+  .copyright {
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  .copyright-links {
+    display: flex;
+    gap: 32px;
+  }
+  @media (max-width: 426px) {
     .last-section {
-        max-width: 1440px;
-        margin: 0 8rem;
-        height: min-content;
-    }
-    .footer-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        place-content: center;
-        gap: 40px;
-        font-size: 2rem;
-        margin-bottom: 8rem;
-    }
-    .description {
-        margin-top: 2rem;
-        line-height: 4rem;
-    }
-    .title {
-        font-size: 2.4rem;
-        font-weight: bold;
-    }
-    .footer-list, .copyright-links {
-        list-style: none;
-    }
-    .footer-item, .title {
-        padding: 8px 0;
-        margin: 8px 0;
+      margin: 0 4rem;
     }
     .copyright {
-        font-size: 2rem;
-        display: flex;
-        justify-content: space-between;
+      flex-direction: column;
     }
-    .copyright-links {
-        display: flex;
-        gap: 32px;
+  }
+  @media (min-width: 1526px) {
+    .last-section {
+      margin: 0 auto;
     }
-    @media (max-width: 426px) {
-        .last-section {
-            margin: 0 4rem;
-        }
-        .copyright {
-            flex-direction: column;
-        }
-    }
-    @media (min-width: 1526px) {
-        .last-section {
-            margin: 0 auto;
-        }
-    }
+  }
 </style>

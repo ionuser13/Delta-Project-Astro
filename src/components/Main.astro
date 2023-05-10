@@ -1,104 +1,113 @@
 ---
 import { Icon } from "astro-icon";
 ---
+
 <section class="section-container">
-    <div class="section-one">
-        <div class="text-container">
-            <h2 class="title">Best Digital Agency Whole Online Today.</h2>
-            <div class="section-one-body">
-                <div>
-                    <p class="text-body">We help to create best products properly & our team also collaborate with our clients.</p>
-                </div>
-                <div class="section-one-buttons">
-                    <button class="button blue">
-                        <a href="#">Get Started</a>
-                    </button>
-                    <button class="button">
-                        <a href="#" class="works">
-                            How it works
-                            <Icon name="mdi:play" width="30" class="play" />
-                        </a>
-                    </button>
-                </div>
-            </div>
-            <div class="clients">
-                <p>Over <span class="clients-number">13,000+ Client</span> all over the world</p>
-            </div>
+  <div class="section-one">
+    <div class="text-container">
+      <h2 class="title">Best Digital Agency Whole Online Today.</h2>
+      <div class="section-one-body">
+        <div>
+          <p class="text-body">
+            We help to create best products properly & our team also collaborate
+            with our clients.
+          </p>
         </div>
-        <div class="image-container">
-            <img src="https://ionuser13.github.io/Delta-Project/assets/main-image-delta.png" alt="" class="illustration">
+        <div class="section-one-buttons">
+          <button class="button blue">
+            <a href="#">Get Started</a>
+          </button>
+          <button class="button">
+            <a href="#" class="works">
+              How it works
+              <Icon name="mdi:play" width="30" class="play" />
+            </a>
+          </button>
         </div>
+      </div>
+      <div class="clients">
+        <p>
+          Over <span class="clients-number">13,000+ Client</span> all over the world
+        </p>
+      </div>
     </div>
+    <div class="image-container">
+      <img
+        src="https://ionuser13.github.io/Delta-Project/assets/main-image-delta.png"
+        alt=""
+        class="illustration"
+      />
+    </div>
+  </div>
 </section>
 <style lang="css">
-    .section-one {
-        max-width: 1440px;
-        display: flex;
-        align-items: flex-start;
-        margin-left: 4rem;
-        height: min-content;
+  .section-one {
+    max-width: 1440px;
+    display: flex;
+    align-items: flex-start;
+    margin-left: 4rem;
+    height: min-content;
+  }
+  .text-container,
+  .image-container {
+    width: 50%;
+  }
+  .title {
+    font-size: 4rem;
+  }
+  .illustration {
+    width: 100%;
+  }
+  .section-one-body {
+    display: flex;
+    flex-direction: column;
+  }
+  .text-body {
+    margin: 32px 0;
+    font-size: 2rem;
+    width: 90%;
+  }
+  .works {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .play {
+    background-color: var(--light-grey);
+    border-radius: 50%;
+  }
+  .clients {
+    font-size: 16px;
+    color: var(--light-grey);
+    margin-top: 16px;
+  }
+  .clients span {
+    color: var(--title-text);
+    font-size: 24px;
+    font-weight: bold;
+  }
+  /*  */
+  @media (max-width: 600px) {
+    .text-container {
+      width: 100%;
     }
-    .text-container, .image-container {
-        width: 50%;
+    .image-container {
+      display: none;
     }
+  }
+  @media (min-width: 769px) {
     .title {
-        font-size: 4rem;
+      font-size: 6rem;
     }
-    .illustration {
-        width: 100%;
+  }
+  @media (min-width: 1048px) {
+    .title {
+      font-size: 8rem;
     }
-    .section-one-body {
-        display: flex;
-        flex-direction: column;
+  }
+  @media (min-width: 1526px) {
+    .section-one {
+      margin: 0 auto;
     }
-    .text-body {
-        margin: 32px 0;
-        font-size: 2rem;
-        width: 90%;
-    }
-    .works {
-        display: flex;
-        align-items: center;
-        gap: 16px
-    }
-    .play {
-        background-color: var(--light-grey);
-        border-radius: 50%;
-    }
-    .clients {
-        font-size: 16px;
-        color: var(--light-grey);
-        margin-top: 16px;
-    }
-    .clients span {
-        color: var(--title-text);
-        font-size: 24px;
-        font-weight: bold;
-    }
-    /*  */
-    @media (max-width: 600px) {
-        .text-container {
-            width: 100%;
-        }
-        .image-container {
-            display: none;
-        }
-    }
-    @media (min-width: 769px) {
-        .title {
-            font-size: 6rem;
-        }
-    }
-    @media (min-width: 1048px) {
-        .title {
-            font-size: 8rem;
-        }
-    }
-    @media (min-width: 1526px) {
-        .section-one {
-            margin: 0 auto;
-        }
-    }
-
-
+  }
 </style>

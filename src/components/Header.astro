@@ -1,102 +1,99 @@
 ---
 import Logo from "@components/header/Logo.astro";
 import Options from "@components/header/Options.astro";
-import {Icon} from "astro-icon";
+import { Icon } from "astro-icon";
 ---
+
 <header class="header">
-    <nav class="navbar">
-        <Logo />
-        <Options/>
-        <div class="buttonContainer">
-            <a href="#" class="button">
-                Sign In
-            </a>
-            <a href="#" class="button border">
-                Sign Up
-            </a>
-        </div>
-        <Icon name="mdi:menu" width="40" class="menu" />
-    </nav>
-    <div class="floating-menu none">
-        <ul class="floating-buttons">
-            <li class="floating-button">
-                <a href="/">Sign In</a>
-            </li>
-            <li class="floating-button">
-                <a href="/">Sign Up</a>
-            </li>
-        </ul>
+  <nav class="navbar">
+    <Logo />
+    <Options />
+    <div class="buttonContainer">
+      <a href="#" class="button"> Sign In</a>
+      <a href="#" class="button border"> Sign Up</a>
     </div>
+    <Icon name="mdi:menu" width="40" class="menu" />
+  </nav>
+  <div class="floating-menu none">
+    <ul class="floating-buttons">
+      <li class="floating-button">
+        <a href="/">Sign In</a>
+      </li>
+      <li class="floating-button">
+        <a href="/">Sign Up</a>
+      </li>
+    </ul>
+  </div>
 </header>
 <style lang="css">
-    .header {
-        width: 100%;
-        padding: 2rem 4rem;
-        background-color: var(--white);
-        position: relative;
-    }
-    .navbar {
-        max-width: 1440px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 12px;
-        margin: 0 auto;
+  .header {
+    width: 100%;
+    padding: 2rem 4rem;
+    background-color: var(--white);
+    position: relative;
+  }
+  .navbar {
+    max-width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin: 0 auto;
+  }
+  .buttonContainer {
+    display: flex;
+    gap: 12px;
+  }
+  .button {
+    font-size: 1.8rem;
+    font-weight: bold;
+    border-radius: 32px;
+    cursor: pointer;
+    padding: 12px 32px;
+    white-space: nowrap;
+    text-decoration: none;
+  }
+  .button:visited {
+    color: inherit;
+  }
+  .border {
+    border: 2px solid var(--logo-black);
+  }
+  .menu {
+    display: none;
+  }
+  .none {
+    display: none;
+  }
+  .floating-menu {
+    position: fixed;
+    right: 4rem;
+    background-color: var(--white);
+    border: 1px solid var(--light-grey);
+    padding: 2rem 4rem;
+    border-radius: 0 0 1.2rem 1.2rem;
+  }
+  .floating-buttons {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-size: 1.6rem;
+  }
+  @media (max-width: 426px) {
+    .menu {
+      display: block;
+      cursor: pointer;
     }
     .buttonContainer {
-        display: flex;
-        gap: 12px;
+      display: none;
     }
-    .button {
-        font-size: 1.8rem;
-        font-weight: bold;
-        border-radius: 32px;
-        cursor: pointer;
-        padding: 12px 32px;
-        white-space: nowrap;
-        text-decoration: none;
-    }
-    .button:visited {
-        color: inherit
-    }
-    .border {
-        border: 2px solid var(--logo-black);
-    }
-    .menu {
-        display: none;
-    }
-    .none {
-        display: none;
-    }
-    .floating-menu {
-        position: fixed;
-        right: 4rem;
-        background-color: var(--white);
-        border: 1px solid var(--light-grey);
-        padding: 2rem 4rem;
-        border-radius: 0 0 1.2rem 1.2rem;
-    }
-    .floating-buttons {
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        font-size: 1.6rem;
-    }
-    @media (max-width: 426px) {
-        .menu {
-            display: block;
-            cursor: pointer;
-        }
-        .buttonContainer {
-            display: none;
-        }
-    }
+  }
 </style>
 <script>
-    const floatingMenu = document.querySelector('.floating-menu');
-    const menuToggle = document.querySelector('.menu');
-    menuToggle.addEventListener('click', () => {
-        floatingMenu.classList.toggle('none')
-    })
+  const floatingMenu = document.querySelector(".floating-menu");
+  const menuToggle = document.querySelector(".menu");
+  menuToggle.addEventListener("click", () => {
+    floatingMenu.classList.toggle("none");
+  });
 </script>

@@ -1,134 +1,141 @@
 ---
 const services = [
-    {
-        name: 'UI/UX Design',
-        description: 'We provide to quality & unique services.',
-        logo: '/src/assets/servicesLogos/curve.png'
-    },
-    {
-        name: 'Web Development',
-        description: 'Standart work and coding we provide you for you',
-        logo: '/src/assets/servicesLogos/coding.png'
-    },
-    {
-        name: 'App Development',
-        description: 'Create your ubest unique App development by our',
-        logo: '/src/assets/servicesLogos/mobile-development.png'
-    },
-    {
-        name: 'Digital Marketing',
-        description: 'Create your ubest unique App development by our',
-        logo: '/src/assets/servicesLogos/digital-marketing.png'
-    },
-    {
-        name: 'Content Writing',
-        description: 'We provide to quality & unique services.',
-        logo: '/src/assets/servicesLogos/writing.png'
-    },
-    {
-        name: 'E-commerce',
-        description: 'Create your ubest unique App development by our',
-        logo: '/src/assets/servicesLogos/shopping-cart.png'
-    },
-]
+  {
+    name: "UI/UX Design",
+    description: "We provide to quality & unique services.",
+    logo: "/src/assets/servicesLogos/curve.png",
+  },
+  {
+    name: "Web Development",
+    description: "Standart work and coding we provide you for you",
+    logo: "/src/assets/servicesLogos/coding.png",
+  },
+  {
+    name: "App Development",
+    description: "Create your ubest unique App development by our",
+    logo: "/src/assets/servicesLogos/mobile-development.png",
+  },
+  {
+    name: "Digital Marketing",
+    description: "Create your ubest unique App development by our",
+    logo: "/src/assets/servicesLogos/digital-marketing.png",
+  },
+  {
+    name: "Content Writing",
+    description: "We provide to quality & unique services.",
+    logo: "/src/assets/servicesLogos/writing.png",
+  },
+  {
+    name: "E-commerce",
+    description: "Create your ubest unique App development by our",
+    logo: "/src/assets/servicesLogos/shopping-cart.png",
+  },
+];
 ---
+
 <section class="section-container">
-    <div class="section-three">
-        <div class="upperSection">
-            <div class="section-name">
-                <p>Services</p>
-            </div>
-            <div class="titleContainer">
-                <h2 class="section-title">What services do we Provide</h2>
-            </div>
-        </div>
-        <div class="services-container">
-            <div class="services">
-                {services.map((service) => {
-                    return (
-                        <div class="grid-item">
-                            <div class="logo-container">
-                                <img src={service.logo} alt="logo" width="40" class="logo" />
-                            </div>
-                            <h2 class="service-title">{service.name}</h2>
-                            <p class="service-description">{service.description}</p>
-                            <a href="#" class="learn-more">Learn more</a>
-                        </div>
-                    )
-                })}
-            </div>
-            <div class="discover-section">
-                <h2 class="section-title">Take your bussiness to new heights with Delta</h2>
-                <div class="button-container">
-                    <button class="button blue">Discover More</button>
-                </div>
-            </div>
-        </div>
+  <div class="section-three">
+    <div class="upperSection">
+      <div class="section-name">
+        <p>Services</p>
+      </div>
+      <div class="titleContainer">
+        <h2 class="section-title">What services do we Provide</h2>
+      </div>
     </div>
+    <div class="services-container">
+      <div class="services">
+        {
+          services.map((service) => {
+            return (
+              <div class="grid-item">
+                <div class="logo-container">
+                  <img src={service.logo} alt="logo" width="40" class="logo" />
+                </div>
+                <h2 class="service-title">{service.name}</h2>
+                <p class="service-description">{service.description}</p>
+                <a href="#" class="learn-more">
+                  Learn more
+                </a>
+              </div>
+            );
+          })
+        }
+      </div>
+      <div class="discover-section">
+        <h2 class="section-title">
+          Take your bussiness to new heights with Delta
+        </h2>
+        <div class="button-container">
+          <button class="button blue">Discover More</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 <style lang="css">
-    .section-three {
-        max-width: 1440px;
-        margin: 0 4rem;
-        height: min-content;
-    }
-    .services-container {
-        margin-top: 4rem;
-        padding: 0 4rem;
-    }
-    .services {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        place-content: center;
-        gap: 40px;
-        margin-bottom: 8rem;
-    }
-    .grid-item {
-        text-align: left;
-        border: 2px solid var(--light-grey);
-        border-radius: 8px;
-        color: black;
-        font-family: sans-serif;
-        font-size: 1.6rem;
-        padding: 36px;
-        display: flex;
-        flex-direction: column;
-        transition: all .2s;
-    }
-    .service-title {
-        margin-top: 12px;
-    }
-    .logo-container {
-        padding: 12px;
-        border-radius: 50%;
-        width: fit-content;
-        height: 64px;
-        background-color: var(--light-grey);
-    }
-    .service-description {
-        margin: 28px 0;
-        line-height: 1.75;
-    }
-    .learn-more {
-        font-weight: bold;
-    }
-    .grid-item:hover {
-        background-color: var(--body-blue);
-        color: var(--white)
-    }
+  .section-three {
+    max-width: 1440px;
+    margin: 0 4rem;
+    height: min-content;
+  }
+  .services-container {
+    margin-top: 4rem;
+    padding: 0 4rem;
+  }
+  .services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    place-content: center;
+    gap: 40px;
+    margin-bottom: 8rem;
+  }
+  .grid-item {
+    text-align: left;
+    border: 2px solid var(--light-grey);
+    border-radius: 8px;
+    color: black;
+    font-family: sans-serif;
+    font-size: 1.6rem;
+    padding: 36px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.2s;
+  }
+  .service-title {
+    margin-top: 12px;
+  }
+  .logo-container {
+    padding: 12px;
+    border-radius: 50%;
+    width: fit-content;
+    height: 64px;
+    background-color: var(--light-grey);
+  }
+  .service-description {
+    margin: 28px 0;
+    line-height: 1.75;
+  }
+  .learn-more {
+    font-weight: bold;
+  }
+  .grid-item:hover {
+    background-color: var(--body-blue);
+    color: var(--white);
+  }
+  .discover-section {
+    display: flex;
+    align-items: center;
+  }
+  @media (max-width: 376px) {
     .discover-section {
-        display: flex;
-        align-items: center;
+      flex-direction: column;
+      gap: 12px;
     }
-    @media (max-width: 376px) {
-        .discover-section {
-            flex-direction: column;
-            gap: 12px;
-        }
+  }
+  @media (min-width: 1526px) {
+    .section-three {
+      margin: 0 auto;
     }
-    @media (min-width: 1526px) {
-        .section-three {
-            margin: 0 auto;
-        }
-    }
+  }
 </style>
