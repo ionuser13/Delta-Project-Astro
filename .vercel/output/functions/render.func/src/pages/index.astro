@@ -1,0 +1,39 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Header from '@components/Header.astro';
+import SectionOne from '@components/Main.astro';
+import SectionTwo from '@components/AboutUs.astro';
+import SectionThree from '@components/Services.astro';
+import SectionFour from '@components/Pricing.astro';
+import SectionFive from '@components/Testimonials.astro';
+import Footer from '@components/Footer.astro';
+import Newsletter from '@components/Newsletter.astro';
+import Blog from '@components/Blogs.astro';
+import Contact from '@components/Contact.astro'
+---
+
+<Layout title="Delta Project">
+	<main>
+		<Header />
+		<SectionOne />
+		<SectionTwo />
+		<SectionThree />
+		<SectionFour />
+		<SectionFive />
+		<Blog />
+		<Contact />
+		<Newsletter />
+		<Footer />
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+	}
+	h1 {
+		font-size: 3rem;
+		font-weight: 800;
+		margin: 0;
+	}
+</style>
